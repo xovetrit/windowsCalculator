@@ -1,0 +1,32 @@
+<form class="calculator">
+        <div class="screenHistory">{{ history }} </div> 
+        <input class="value" 
+               [ngStyle]="{'font-size': screenValue.length > 12 ? '20px' : '40px'}" 
+               type="text" [(ngModel)]="screenValue" [value]="screenValue" name="screenValue" readonly=""
+        >
+        <span class="num clear" (click)="clearScreen('ce')">ce</span>
+        <span class="num clear" (click)="clearScreen('c')">c</span>
+        <span class="num clear ximg" (click)="deleteLastDigit()"><img class="ximgdark" src="../../assets/images/x.PNG" alt=""></span>
+        <span class="num matsymbol" (click)="setMathSymbol('/')">&divide;</span>
+
+        <span class="num numeric" (click)="setNumber('7')">7</span>
+        <span class="num numeric" (click)="setNumber('8')">8</span>
+        <span class="num numeric" (click)="setNumber('9')">9</span>
+        <span class="num matsymbol" (click)="setMathSymbol('*')">&times;</span>
+        
+        <span class="num numeric" (click)="setNumber('4')">4</span>
+        <span class="num numeric" (click)="setNumber('5')">5</span>
+        <span class="num numeric" (click)="setNumber('6')">6</span>
+        <span class="num matsymbol" (click)="setMathSymbol('-')">&ndash;</span>
+        
+        <span class="num numeric" (click)="setNumber('1')">1</span>
+        <span class="num numeric" (click)="setNumber('2')">2</span>
+        <span class="num numeric" (click)="setNumber('3')">3</span>
+        <span class="num matsymbol" (click)="setMathSymbol('+')">+</span>
+
+        <span class="num numeric gray" (click)="togglePlusMinus();">&#177;</span>
+        <span class="num numeric" (click)="setZero('0')">0</span>
+        <span class="num numeric gray" (click)="setDot('.')">,</span>
+
+        <span class="num equal matsymbol" (click)="calculate()">=</span> 
+</form>

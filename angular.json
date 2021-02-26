@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "windowsCalc"
+    }
+  },
+  "defaultProject": "windowsCalc",
+  "cli": {
+    "analytics": false
+  }
 }

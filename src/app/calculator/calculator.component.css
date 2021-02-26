@@ -1,0 +1,69 @@
+.calculator {
+    background: #e6e6e6;
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    width: 300px;
+    height: 380px;
+}
+.calculator .value {
+    grid-column: span 4;
+    width: 100%;
+    height: 35px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 0 10px 0 10px;
+    font-size: 40px;
+    font-weight: 600;
+    background: #e6e6e6;
+    /* font-size: 40px;  */
+}
+.calculator span {
+    display: grid;
+    text-transform: uppercase;
+    font-weight: 300;
+    /* width: 80px; */
+    /* height: 60px; */
+    font-size: 14px;
+    color: #000;
+    background: #f0f0f0;
+    place-items: center;
+    border: 1px solid #e6e6e6;
+}
+.calculator span.numeric {
+    background: #fafafa;
+    font-weight: 700;
+    font-size: 18px;
+}
+.calculator span.equal {
+    background: #8abae0;
+}
+.calculator span.equal:hover {
+    background: #4599db;
+}
+.calculator span.matsymbol {
+    font-size: 26px;
+}
+.calculator span.clear {
+    font-weight: 400;
+}
+.calculator span.gray {
+    background-color: #f0f0f0;
+}
+.calculator span.ximg:hover .ximgdark{
+    content: url('../../assets/images/x_dark.PNG');
+}
+.calculator span:active, .calculator span:hover {
+    background: #d1d1d1;
+}
+.calculator div.screenHistory {
+    color: #a3a3a3;
+    grid-column: span 4;
+    width: 100%;
+    height: 20px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px 10px 0 10px;
+}
