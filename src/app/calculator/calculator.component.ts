@@ -54,19 +54,26 @@ export class CalculatorComponent {
   }
   
   setNumber(value: string) {
+
+    if (this.history.includes('=')) {
+      this.screenValue = ''
+      this.history = ''
+      this.firstValue = ''
+      return this.screenValue = this.screenValue + value
+    }
+
     this.screenValue == '0' || this.screenValue =='-0' ? this.screenValue = value : this.screenValue = this.screenValue + value
   }
 
   setMathSymbol(value: string) {
-    this.firstValue = this.screenValue + value;
-    this.screenValue = '0'
-    this.history = this.firstValue
-  }
 
-  setZero(value: string) {
-    if ( this.screenValue != '0') {
-      this.screenValue = this.screenValue + value
+    if ( this.firstValue === '') {
+      this.firstValue = this.screenValue + value;
+      this.history = this.firstValue
+      this.screenValue = '0'
     }
+
+
   }
 
   setDot(value: string){
